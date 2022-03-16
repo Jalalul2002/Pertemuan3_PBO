@@ -19,19 +19,19 @@ public class Student {
     private Long id;
 
     @NotEmpty(message = "First Name is required")
-    @Column(name = "first_name", nullable = false)
-    private String firstname;
+    @Column(name = "firstName", nullable = false)
+    private String firstName;
 
     @NotEmpty(message = "Last Name is required")
-    @Column(name = "last_name", nullable = false)
-    private String lastname;
+    @Column(name = "lastName", nullable = false)
+    private String lastName;
 
     @NotEmpty(message = "Email is required")
     @Column(name = "email", unique = true, nullable = false)
     private String email;
 
     @NotEmpty(message = "Phone Number is required")
-    @Column(name = "phone_number", unique = true, nullable = false)
+    @Column(name = "phonenumber", unique = true, nullable = false)
     private String phonenumber;
 
 

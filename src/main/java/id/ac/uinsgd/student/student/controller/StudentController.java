@@ -36,11 +36,11 @@ public class StudentController {
         return studentservice.save(std);
     }
 
-    @PostMapping(value = "/{id}")
+    @PutMapping(value = "/{id}")
     public Student updateStudent(@PathVariable("id") @Min(1) Long id, @Valid @RequestBody Student newStd) {
         Student student = studentservice.findById(id).orElseThrow(() -> new StudentNotFoundException("Student with  " + id + "is Not Found!!"));
-        student.setFirstname(newStd.getFirstname());
-        student.setLastname(newStd.getLastname());
+        student.setFirstName(newStd.getFirstName());
+        student.setLastName(newStd.getLastName());
         student.setEmail(newStd.getEmail());
         student.setPhonenumber(newStd.getPhonenumber());
         return studentservice.save(student);
